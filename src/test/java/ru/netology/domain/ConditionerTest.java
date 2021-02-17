@@ -11,4 +11,13 @@ public class ConditionerTest {
         Conditioner conditioner = new Conditioner();
     }
 
+    @Test
+    public void checkTemperature(){
+        Conditioner conditioner = new Conditioner();
+        assertEquals(0,conditioner.getCurrentTemperature());
+        conditioner.setCurrentTemperature(20);
+        assertEquals(20,conditioner.getCurrentTemperature());
+
+    }
+
 }
