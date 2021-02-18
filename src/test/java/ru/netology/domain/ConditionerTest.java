@@ -7,8 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ConditionerTest {
 
     @Test
-    public void shouldCGet(){
+    public void shouldCGetAndSet(){
         Conditioner conditioner = new Conditioner();
+        String expected = "Кондишн";
+
+        assertNull(conditioner.getName());
+        conditioner.setName(expected);
+        assertEquals(expected, conditioner.getName());
     }
 
     @Test
